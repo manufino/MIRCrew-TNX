@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "MIRCrew TNX",
+  "version": "1.0",
+  "description": "Aggiunge un pulsante Ringrazia su mircrew-releases.org",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://mircrew-releases.org/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://mircrew-releases.org/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
